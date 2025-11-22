@@ -1,19 +1,26 @@
-# 👾 DevPocket
+<div align="center">
+  <h1>👾 DevPocket</h1>
 
-> Um dicionário de termos de programação com estética Retro/Cyberpunk e funcionalidades de terminal.
+  <p>
+    Um dicionário de termos de programação com estética <b>Retro/Cyberpunk</b> e funcionalidades de terminal.
+  </p>
 
-<!-- Link do Deploy em destaque -->
-[![Deploy](https://img.shields.io/badge/Acesse_o_Sistema-VER_ONLINE-00ff41?style=for-the-badge&logo=github&logoColor=black)](https://lubisca.github.io/DevPocket/)
+  <!-- Link do Deploy em destaque -->
+  <a href="https://lubisca.github.io/DevPocket/">
+    <img src="https://img.shields.io/badge/Acesse_o_Sistema-VER_ONLINE-00ff41?style=for-the-badge&logo=github&logoColor=black" alt="Ver Online">
+  </a>
 
-<br>
+  <br><br>
 
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=OPERACIONAL&color=GREEN&style=for-the-badge)
-![Badge HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![Badge CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Badge JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+  <!-- Badges de Status e Tech -->
+  <img src="http://img.shields.io/static/v1?label=STATUS&message=OPERACIONAL&color=GREEN&style=for-the-badge" alt="Status Operacional">
+  <br>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+</div>
 
 ---
-
 ## 🖥️ Sobre o Projeto
 
 O **DevPocket** é uma aplicação web desenvolvida para auxiliar estudantes de programação a consultarem termos técnicos, sintaxes e conceitos de forma rápida. 
