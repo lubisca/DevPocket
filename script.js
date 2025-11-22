@@ -174,23 +174,24 @@ function mostrarNotificacao(mensagem) {
 }
 
 
-// Mostra o botão se rolar mais que 300px
-window.onscroll = function () {
-    const botao = document.getElementById("btn-topo");
-    if (document.documentElement.scrollTop > 300) {
-        botao.style.display = "block";
+// Lógica do Botão Topo
+const btnTopo = document.getElementById("btn-topo");
+
+window.onscroll = function() {
+    // Se rolar mais que 300px, mostra o botão
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btnTopo.style.display = "flex"; // Usa flex para centralizar a setinha
     } else {
-        botao.style.display = "none";
+        btnTopo.style.display = "none";
     }
 };
 
 function subirTela() {
     window.scrollTo({
         top: 0,
-        behavior: "smooth" // Sobe suavemente
+        behavior: "smooth" // Rolagem suave
     });
 }
-
 /* --- FUNÇÕES DO MODAL SOBRE --- */
 
 function abrirModal() {
