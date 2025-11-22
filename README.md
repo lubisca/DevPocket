@@ -2,6 +2,11 @@
 
 > Um dicionário de termos de programação com estética Retro/Cyberpunk e funcionalidades de terminal.
 
+<!-- Link do Deploy em destaque -->
+[![Deploy](https://img.shields.io/badge/Acesse_o_Sistema-VER_ONLINE-00ff41?style=for-the-badge&logo=github&logoColor=black)](https://lubisca.github.io/DevPocket/)
+
+<br>
+
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=OPERACIONAL&color=GREEN&style=for-the-badge)
 ![Badge HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![Badge CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -14,6 +19,8 @@
 O **DevPocket** é uma aplicação web desenvolvida para auxiliar estudantes de programação a consultarem termos técnicos, sintaxes e conceitos de forma rápida. 
 
 O diferencial está na **User Interface (UI)** imersiva, inspirada em monitores CRT antigos, terminais Linux e filmes de ficção científica dos anos 80/90.
+
+🔗 **Link de acesso:** [https://lubisca.github.io/DevPocket/](https://lubisca.github.io/DevPocket/)
 
 ---
 
