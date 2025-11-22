@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DevPocket</title>
+</head>
+
+<body>
+    <header>
+        <h1>DevPocket 1.0</h1>
+        <div>
+            <input type="text" placeholder="Digite um termo...">
+
+            <!-- Botão Buscar -->
+            <button id="botao-busca" onclick="iniciarBusca()">BUSCAR</button>
+
+            <!-- Botão Random (?) -->
+            <button id="botao-random" onclick="buscaAleatoria()" title="Termo Aleatório">?</button>
+
+            <!-- Botão Sobre (i) -->
+            <button id="btn-sobre" onclick="abrirModal()" title="Sobre o Projeto">i</button>
+        </div>
+    </header>
+    <!-- Container da notificação flutuante -->
+    <div id="toast-notification" class="toast-hidden">
+        <span class="icon">💾</span>
+        <span id="toast-msg">DADOS COPIADOS</span>
+    </div>
+    <main>
+        <section class="card-container">
+            <!-- <article class="card">
+                <h2>JavaScript</h2>
+                <p>1995</p>
+                <p>JavaScript é uma linguagem de programação</p>
+                <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">Saiba mais</a>
+            </article> -->
+        </section>
+    </main>
+    <button id="btn-topo" onclick="subirTela()">⬆</button>
+    <footer>
+        <footer class="footer">
+            <ul class="footer-links">
+                <li>
+                    <a target="_blank" href="https://github.com/lubisca">GitHub</a>
+                </li>
+                <li>
+                    <a target="_blank" href="">Alura</a>
+                </li>
+            </ul>
+            </p>
+        </footer>
+        <!-- Estrutura da Janela Modal -->
+        <div id="modal-sobre" class="modal-overlay">
+            <div class="modal-box">
+                <h2 class="modal-title">>> SYSTEM_INFO</h2>
+
+                <div class="modal-content">
+                    <p><strong>PROJETO:</strong> DevPocket v1.0</p>
+                    <p><strong>DEV:</strong> Lubisca</p>
+                    <p><strong>STATUS:</strong> Operacional.. eu acho</p>
+                    <br>
+                    <p>DevPocket é um dicionário de termos de programação em estilo Cyberpunk/Retro, criado por Lubisca
+                        com a ajuda do Gimine. Pensado para quem está finalizando a Imersão Dev com
+                        Google Gemini 10ª Edição — e para continuar guiando seus passos mesmo depois que a imersão
+                        acabar :p</p>
+                </div>
+
+                <button class="modal-close" onclick="fecharModal()">[ X ] FECHAR</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+</body>
+
+</html>
