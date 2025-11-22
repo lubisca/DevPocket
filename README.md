@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>👾 DevPocket</h1>
+  <h1>💾 DevPocket</h1>
 
   <p>
     Um dicionário de termos de programação com estética <b>Retro/Cyberpunk</b> e funcionalidades de terminal.
@@ -21,7 +21,7 @@
 </div>
 
 ---
-## 🖥️ Sobre o Projeto
+## 🪧 Sobre o Projeto
 
 O **DevPocket** é uma aplicação web desenvolvida para auxiliar estudantes de programação a consultarem termos técnicos, sintaxes e conceitos de forma rápida. 
 
@@ -33,23 +33,23 @@ O diferencial está na **User Interface (UI)** imersiva, inspirada em monitores 
 
 ## ✨ Funcionalidades
 
-### 🔍 Busca & Dados
+### 🔬 Busca & Dados
 - **Busca em Tempo Real:** Filtra termos de um banco de dados JSON via `fetch API`.
 - **Banco de Dados Rico:** Definições, exemplos de código, quando usar e o que evitar.
 - **Modo Pânico:** Tentar buscar "o nada" aciona um alerta de erro crítico no sistema ☠️.
 - **Busca Aleatória (`/dev/random`):** Um botão para descobrir um termo novo aleatoriamente.
 
-### 🎨 UI/UX & Design
+### 🐻‍❄️ UI/UX & Design
 - **Estética Retro:** Efeitos de *Scanline*, *Glow* (brilho neon) e fontes pixeladas (`VT323` e `Fira Code`).
 - **Animações:** Botões com feedback tátil, janelas modais e notificações deslizantes (Toasts).
 
-### 🛠️ Utilitários
+### ⚙️ Utilitários
 - **Click-to-Copy:** Clique em qualquer exemplo de código para copiar automaticamente para a área de transferência.
 - **Responsividade:** Layout adaptável para Desktop e Mobile.
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## ⌨️ Tecnologias Utilizadas
 
 - **HTML5 Semântico:** Estrutura organizada.
 - **CSS3 Moderno:**
