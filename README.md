@@ -31,8 +31,6 @@ O diferencial está na **User Interface (UI)** imersiva, inspirada em monitores 
 
 ---
 
-## ✨ Funcionalidades
-
 ### 🔬 Busca & Dados
 - **Busca em Tempo Real:** Filtra termos de um banco de dados JSON via `fetch API`.
 - **Banco de Dados Rico:** Definições, exemplos de código, quando usar e o que evitar.
