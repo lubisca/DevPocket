@@ -249,6 +249,24 @@ article a:hover {
     cursor: alias;
 }
 
+.lubisca {
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 1px groove var(--primary-color);
+    padding: 0 2px;
+    transition: all 0.2s ease;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.lubisca:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-bottom-style: solid;
+    box-shadow: 0 0 10px var(--primary-color);
+    cursor: alias;
+}
+
 .footer {
     position: fixed;
     bottom: 0;
@@ -469,12 +487,12 @@ article a:hover {
 
 .shake-input {
     animation: shake 0.5s;
-    border-color: #ff003c !important;
-    color: #ff003c !important;
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
 }
 
 .system-error {
-    border: 2px solid #ff003c;
+    border: 2px solid var(--primary-color);
     background-color: rgba(20, 0, 0, 0.9);
     padding: 3rem;
     text-align: center;
@@ -486,27 +504,27 @@ article a:hover {
 .system-error h3 {
     font-family: 'VT323', monospace;
     font-size: 3rem;
-    color: #ff003c;
+    color: var(--primary-color);
     margin: 10px 0;
     text-shadow: 2px 2px 0px #fff;
 }
 
 .system-error p {
     font-family: 'Fira Code', monospace;
-    color: #ff8095;
+    color: var(--primary-color);
     font-size: 1.2rem;
 }
 
 .error-icon {
     font-size: 5rem;
-    color: #ff003c;
+    color: var(--primary-color);
     margin-bottom: 1rem;
-    animation: pulse 1s infinite;
+    animation: pulse 5s infinite;
 }
 
 .blinking {
-    animation: blink 1s step-end infinite;
-    color: #fff !important;
+    animation: blink 2s step-end infinite;
+    color: #ff003c !important;
     margin-top: 2rem;
     font-weight: bold;
 }
@@ -529,11 +547,19 @@ article a:hover {
     100% { transform: scale(1); }
 }
 
+/* --- NOVIDADE 2: Estilo "Click to Copy" nos exemplos (COM CORREÇÃO MOBILE) --- */
 .copy-code {
     cursor: copy;
     border-bottom: 1px dashed var(--tertiary-color);
     transition: all 0.2s;
     position: relative;
+    
+    /* --- CORREÇÃO DO BUG DE LARGURA DNV--- */
+    word-break: break-word; /* Obriga a quebrar a linha mesmo no meio da palavra */
+    overflow-wrap: break-word; /* Garante compatibilidade */
+    white-space: normal; /* Permite que o texto flua para a linha de baixo */
+    display: inline-block; /* Faz o elemento respeitar as margens */
+    max-width: 100%; /* Garante que nunca passe de 100% do card */
 }
 
 .copy-code:hover {

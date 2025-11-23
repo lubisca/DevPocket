@@ -1,5 +1,7 @@
 let cardContainer = document.querySelector(".card-container");
 let campoBusca = document.querySelector("header input");
+
+
 let dados = [];
 
 async function iniciarBusca() {
@@ -22,7 +24,6 @@ async function iniciarBusca() {
             return;
         }
     }
-
     const dadosFiltrados = dados.filter(dado =>
         dado.termo.toLowerCase().includes(termoBusca)
     );
@@ -40,6 +41,11 @@ async function iniciarBusca() {
 
     renderizarCards(dadosFiltrados);
 }
+
+    //começar com cards
+        campoBusca.value = 'a'
+        iniciarBusca()
+        campoBusca.value = ''
 
 function renderizarCards(dados) {
     cardContainer.innerHTML = "";
@@ -67,7 +73,7 @@ function acionarModoPanico() {
     // Limpa a tela e mostra mensagem de "Hacker"
     cardContainer.innerHTML = `
         <div class="system-error">
-            <div class="error-icon">☠</div>
+            <div class="error-icon">&#128206;</div>
             <h3>ERRO CRÍTICO: VÁCUO DETECTADO</h3>
             <p>> O USUÁRIO TENTOU BUSCAR O NADA.</p>
             <p>> O SISTEMA NÃO LÊ MENTES (AINDA).</p>
@@ -109,19 +115,20 @@ async function buscaAleatoria() {
     renderizarCards([termoSorteado]);
 }
 
+
 //testar isso ainda
 function renderizarCards(listaDados) {
-    cardContainer.innerHTML = ""; 
-    
+    cardContainer.innerHTML = "";
+
     const favoritos = JSON.parse(localStorage.getItem('devPocketFavs')) || [];
 
     for (let dado of listaDados) {
         let article = document.createElement("article");
         article.classList.add("card");
-        
+
         const isFavorito = favoritos.some(fav => fav.termo === dado.termo);
         const classeEstrela = isFavorito ? 'saved' : '';
-        
+
         // 1. Versão para o botão de copiar (Escapa as aspas simples para não quebrar o JS)
         const textoParaCopiar = dado.exemplo.replace(/'/g, "\\'");
 
@@ -149,6 +156,7 @@ function renderizarCards(listaDados) {
         cardContainer.appendChild(article);
     }
 }
+
 // Função auxiliar para copiar com Notificação Hacker
 function copiarTexto(texto) {
     navigator.clipboard.writeText(texto).then(() => {
@@ -177,7 +185,7 @@ function mostrarNotificacao(mensagem) {
 // Lógica do Botão Topo
 const btnTopo = document.getElementById("btn-topo");
 
-window.onscroll = function() {
+window.onscroll = function () {
     // Se rolar mais que 300px, mostra o botão
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
         btnTopo.style.display = "flex"; // Usa flex para centralizar a setinha
@@ -228,4 +236,5 @@ function escaparHTML(texto) {
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
 }
+
 
