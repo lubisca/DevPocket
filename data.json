@@ -950,5 +950,245 @@
     "usar_em": "Dar suporte a navegadores velhos.",
     "evitar": "Carregar polyfills desnecessários em navegadores modernos (pesa o site).",
     "link": "https://developer.mozilla.org/pt-BR/docs/Glossary/Polyfill"
+  },
+    {
+    "termo": "Closure",
+    "definicao": "Quando uma função 'lembra' do ambiente onde foi criada, mesmo sendo executada fora dele.",
+    "exemplo": "function criarContador() { let i=0; return () => i++; }",
+    "usar_em": "Criar variáveis privadas e fábricas de funções.",
+    "evitar": "Pode causar vazamento de memória se não gerenciado corretamente.",
+    "link": "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Closures"
+  },
+  {
+    "termo": "Event Loop",
+    "definicao": "O mecanismo que permite o JavaScript (single-threaded) realizar operações não bloqueantes.",
+    "exemplo": "Por isso o setTimeout(..., 0) executa só depois do código síncrono.",
+    "usar_em": "Entender por que seu código não executa na ordem que você lê.",
+    "evitar": "Bloquear a Call Stack com loops pesados (trava a tela).",
+    "link": "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/EventLoop"
+  },
+  {
+    "termo": "SSR (Server-Side Rendering)",
+    "definicao": "Renderizar o HTML da página no servidor antes de enviar ao navegador.",
+    "exemplo": "Next.js e Nuxt.js fazem isso por padrão.",
+    "usar_em": "Melhorar SEO e o tempo de carregamento inicial (FCP).",
+    "evitar": "Quando a interatividade é complexa e o servidor é lento.",
+    "link": "https://nextjs.org/docs/pages/building-your-application/rendering/server-side-rendering"
+  },
+  {
+    "termo": "SSG (Static Site Generation)",
+    "definicao": "Gerar todas as páginas HTML no momento do build (compilação), não na requisição.",
+    "exemplo": "Blogs, documentações e landing pages.",
+    "usar_em": "Sites que mudam pouco e precisam ser ultra-rápidos.",
+    "evitar": "Sites com conteúdo em tempo real ou personalizado por usuário.",
+    "link": "https://www.gatsbyjs.com/docs/glossary/static-site-generator/"
+  },
+  {
+    "termo": "Hydration",
+    "definicao": "Processo onde o JS 'acorda' uma página HTML estática vinda do servidor, tornando-a interativa.",
+    "exemplo": "O botão aparece rápido (HTML), mas só clica depois da hidratação (JS).",
+    "usar_em": "Frameworks SSR como Next.js/React.",
+    "evitar": "Enviar JS demais, causando demora para a página ficar interativa (TTI).",
+    "link": "https://react.dev/reference/react-dom/client/hydrateRoot"
+  },
+  {
+    "termo": "Microservices",
+    "definicao": "Arquitetura onde o sistema é dividido em pequenos serviços independentes.",
+    "exemplo": "Um serviço só para pagamentos, outro só para autenticação.",
+    "usar_em": "Sistemas gigantes com times grandes e tecnologias diversas.",
+    "evitar": "Overengineering em projetos pequenos (comece com Monolito).",
+    "link": "https://aws.amazon.com/pt/microservices/"
+  },
+  {
+    "termo": "Monorepo",
+    "definicao": "Estratégia de manter múltiplos projetos (front, back, mobile) no mesmo repositório Git.",
+    "exemplo": "Turborepo, Nx, Lerna.",
+    "usar_em": "Compartilhar código (ex: tipos, configs) entre projetos.",
+    "evitar": "Sem ferramentas adequadas, o tempo de build/clone fica insuportável.",
+    "link": "https://monorepo.tools/"
+  },
+  {
+    "termo": "SOLID",
+    "definicao": "Acrônimo para 5 princípios de design de software orientado a objetos.",
+    "exemplo": "S = Single Responsibility (Uma classe deve ter apenas uma responsabilidade).",
+    "usar_em": "Escrever código limpo, testável e manutenível no back-end.",
+    "evitar": "Aplicar dogmaticamente em scripts simples ou código puramente funcional.",
+    "link": "https://en.wikipedia.org/wiki/SOLID"
+  },
+  {
+    "termo": "DRY (Don't Repeat Yourself)",
+    "definicao": "Princípio que diz para evitar duplicação de lógica.",
+    "exemplo": "Extrair código repetido para uma função auxiliar.",
+    "usar_em": "Sempre que ver Copiar/Colar no seu código.",
+    "evitar": "Abstração prematura (às vezes repetir é melhor que acoplar errado).",
+    "link": "https://en.wikipedia.org/wiki/Don%27t_repeat_yourself"
+  },
+  {
+    "termo": "KISS (Keep It Simple, Stupid)",
+    "definicao": "O código deve ser o mais simples possível.",
+    "exemplo": "Não use uma biblioteca de IA para somar dois números.",
+    "usar_em": "Tomada de decisões técnicas.",
+    "evitar": "Confundir 'simples' com 'simplista' (que ignora casos de borda).",
+    "link": "https://en.wikipedia.org/wiki/KISS_principle"
+  },
+  {
+    "termo": "Immutability",
+    "definicao": "Conceito onde dados não são alterados, mas sim substituídos por novas cópias.",
+    "exemplo": "const novoArray = [...antigo, item]; (em vez de push)",
+    "usar_em": "React, Redux e programação funcional para evitar bugs de estado.",
+    "evitar": "Pode consumir mais memória se não usar estruturas compartilhadas.",
+    "link": "https://developer.mozilla.org/en-US/docs/Glossary/Immutable"
+  },
+  {
+    "termo": "Memoization",
+    "definicao": "Técnica de otimização que armazena resultados de funções pesadas para não recalcular.",
+    "exemplo": "useMemo no React ou bibliotecas como Lodash.memoize.",
+    "usar_em": "Cálculos caros que são chamados repetidamente com os mesmos inputs.",
+    "evitar": "Otimizar prematuramente funções leves (o custo da memória não compensa).",
+    "link": "https://en.wikipedia.org/wiki/Memoization"
+  },
+  {
+    "termo": "Tree Shaking",
+    "definicao": "Processo de remover código morto (não usado) do bundle final.",
+    "exemplo": "Importar só { Button } em vez da lib inteira reduz o peso.",
+    "usar_em": "Otimização de performance em produção.",
+    "evitar": "Bibliotecas antigas (CommonJS) que não suportam bem essa técnica.",
+    "link": "https://developer.mozilla.org/en-US/docs/Glossary/Tree_shaking"
+  },
+  {
+    "termo": "Bundler",
+    "definicao": "Ferramenta que empacota todo seu JS, CSS e imagens em arquivos prontos para o navegador.",
+    "exemplo": "Vite, Webpack, Parcel.",
+    "usar_em": "Qualquer projeto front-end moderno.",
+    "evitar": "Configurar Webpack do zero se você pode usar Vite ou Next.js.",
+    "link": "https://vitejs.dev/guide/why.html"
+  },
+  {
+    "termo": "Tailwind CSS",
+    "definicao": "Framework CSS 'Utility-First' onde você estiliza direto nas classes do HTML.",
+    "exemplo": "<div class='bg-blue-500 text-white p-4'>",
+    "usar_em": "Desenvolvimento rápido e padronizado.",
+    "evitar": "Se você odeia HTML poluído com muitas classes.",
+    "link": "https://tailwindcss.com/"
+  },
+  {
+    "termo": "WebAssembly (Wasm)",
+    "definicao": "Formato binário que permite rodar código de alta performance (C++, Rust) no navegador.",
+    "exemplo": "Figma e Google Earth rodam no navegador graças ao Wasm.",
+    "usar_em": "Edição de vídeo, jogos pesados, criptografia.",
+    "evitar": "Substituir JS em tarefas simples de DOM (JS é mais rápido nisso).",
+    "link": "https://developer.mozilla.org/pt-BR/docs/WebAssembly"
+  },
+  {
+    "termo": "PWA (Progressive Web App)",
+    "definicao": "Sites que se comportam como apps nativos (instalam, funcionam offline).",
+    "exemplo": "Twitter Lite, Starbucks App.",
+    "usar_em": "Oferecer experiência de app sem precisar das lojas (App Store/Play Store).",
+    "evitar": "Se precisar de acesso profundo ao hardware (ex: bluetooth complexo em iOS).",
+    "link": "https://developer.mozilla.org/pt-BR/docs/Web/Progressive_web_apps"
+  },
+  {
+    "termo": "Service Worker",
+    "definicao": "Script que roda em segundo plano, separado da página web.",
+    "exemplo": "Interceptar requisições para carregar o site offline.",
+    "usar_em": "Cache avançado, Push Notifications, Background Sync.",
+    "evitar": "Pode ser difícil de debugar o cache (usuário vendo versão velha).",
+    "link": "https://developer.mozilla.org/pt-BR/docs/Web/API/Service_Worker_API"
+  },
+  {
+    "termo": "OAuth",
+    "definicao": "Padrão aberto para autorização de acesso (Login com Google/Facebook).",
+    "exemplo": "Botão 'Entrar com Google'.",
+    "usar_em": "Não querer gerenciar senhas e segurança no seu banco.",
+    "evitar": "Implementar seu próprio protocolo de segurança do zero.",
+    "link": "https://oauth.net/2/"
+  },
+  {
+    "termo": "CSRF",
+    "definicao": "Ataque onde um site malicioso engana o navegador para executar ações em outro site onde o usuário está logado.",
+    "exemplo": "Um link oculto que posta algo no seu Facebook sem você ver.",
+    "usar_em": "Use Tokens CSRF para prevenir isso.",
+    "evitar": "Confiar apenas em Cookies para autenticação sem proteções extras.",
+    "link": "https://owasp.org/www-community/attacks/csrf"
+  },
+  {
+    "termo": "Webhook",
+    "definicao": "Forma de um app enviar dados automáticos para outro quando algo acontece (Push reverso).",
+    "exemplo": "Stripe avisa seu servidor que o pagamento foi aprovado.",
+    "usar_em": "Integrações entre sistemas (Slack, Discord, Pagamentos).",
+    "evitar": "Não validar a origem da requisição (segurança).",
+    "link": "https://docs.github.com/pt/webhooks"
+  },
+  {
+    "termo": "Kubernetes (K8s)",
+    "definicao": "Sistema para orquestrar (gerenciar) containers Docker em escala.",
+    "exemplo": "O Google usa para gerenciar seus bilhões de containers.",
+    "usar_em": "Infraestrutura complexa com muitos microserviços.",
+    "evitar": "Overkill total para hospedar um site simples ou API pequena.",
+    "link": "https://kubernetes.io/pt/"
+  },
+  {
+    "termo": "Redis",
+    "definicao": "Banco de dados em memória, extremamente rápido.",
+    "exemplo": "Salvar sessões de usuário ou cache de consultas lentas.",
+    "usar_em": "Quando performance de leitura é crítica.",
+    "evitar": "Usar como único banco de dados persistente (se a RAM acabar, perde dados).",
+    "link": "https://redis.io/"
+  },
+  {
+    "termo": "Headless CMS",
+    "definicao": "Gerenciador de conteúdo que só fornece dados via API (sem front-end acoplado).",
+    "exemplo": "Contentful, Strapi, Sanity.",
+    "usar_em": "Quando você quer usar React/Vue para exibir o conteúdo do blog.",
+    "evitar": "Se o time de marketing precisa de 'drag-and-drop' visual da página inteira (Wix/Wordpress).",
+    "link": "https://jamstack.org/headless-cms/"
+  },
+  {
+    "termo": "Jamstack",
+    "definicao": "Arquitetura baseada em Javascript, APIs e Markup (HTML pré-renderizado).",
+    "exemplo": "Sites estáticos hospedados em CDN com funções dinâmicas.",
+    "usar_em": "Segurança, escala barata e performance.",
+    "evitar": "Aplicações que dependem 100% de lógica no servidor a cada clique.",
+    "link": "https://jamstack.org/"
+  },
+  {
+    "termo": "Shadow DOM",
+    "definicao": "Técnica para encapsular HTML e CSS, impedindo que estilos globais afetem o componente.",
+    "exemplo": "A tag <video> do navegador usa isso internamente.",
+    "usar_em": "Web Components e Micro-frontends.",
+    "evitar": "Dificulta estilizar o componente externamente se não for planejado.",
+    "link": "https://developer.mozilla.org/pt-BR/docs/Web/API/Web_components/Using_shadow_DOM"
+  },
+  {
+    "termo": "Strict Mode",
+    "definicao": "Modo do JavaScript que proíbe sintaxes ruins e lança mais erros.",
+    "exemplo": "'use strict'; x = 3.14; // Erro, x não foi declarado.",
+    "usar_em": "Sempre. Módulos ES6 e Classes já usam por padrão.",
+    "evitar": "Código legado muito antigo que pode quebrar.",
+    "link": "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Strict_mode"
+  },
+  {
+    "termo": "Transpiler",
+    "definicao": "Ferramenta que traduz código de uma linguagem para outra (ou versão antiga).",
+    "exemplo": "Babel transforma JS moderno em JS compatível com IE11.",
+    "usar_em": "Garantir compatibilidade com navegadores velhos.",
+    "evitar": "Configurações complexas manuais (hoje os frameworks já resolvem isso).",
+    "link": "https://babeljs.io/"
+  },
+  {
+    "termo": "Event Bubbling",
+    "definicao": "Comportamento onde um evento (clique) no filho 'sobe' para os pais no HTML.",
+    "exemplo": "Clicar num botão dentro de uma Div dispara o onclick da Div também.",
+    "usar_em": "Event Delegation (colocar um listener no pai para ouvir vários filhos).",
+    "evitar": "Esquecer de usar e.stopPropagation() quando não quiser esse efeito.",
+    "link": "https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling"
+  },
+  {
+    "termo": "Currying",
+    "definicao": "Transformar uma função com vários argumentos em uma sequência de funções.",
+    "exemplo": "soma(a)(b) em vez de soma(a, b).",
+    "usar_em": "Programação funcional e composição de funções.",
+    "evitar": "Uso excessivo torna o código difícil de ler para iniciantes.",
+    "link": "https://javascript.info/currying-partials"
   }
 ]
