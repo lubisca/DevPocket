@@ -103,7 +103,7 @@ async function buscaAleatoria() {
     }
 
     // Sorteia um número
-    const indiceAleatorio = Math.floor(Math.random() * dados.length - 1);
+    const indiceAleatorio = Math.floor(Math.random() * dados.length);
     const termoSorteado = dados[indiceAleatorio];
 
     // Preenche o input e pisca ele

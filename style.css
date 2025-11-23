@@ -1,4 +1,4 @@
-/* 1. Importando fontes Retro: VT323 (Títulos) e Fira Code (Código/Texto) */
+/* fontes Retro: VT323 (Títulos) e Fira Code (Código/Texto) */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=VT323&display=swap');
 
 * {
@@ -117,7 +117,7 @@ div input:focus {
     transform: translate(2px, 2px);
 }
 
-/* Estilo base para TODOS os botões do header para garantir consistência */
+/* Estilo base para TODOS os botões do header para garantir 'consistência' mas o tamanho da fonte pode deixar diferente */
 #botao-busca, #botao-random, #btn-sobre {
     padding: 0.8rem 1.5rem; /* Padding padronizado */
     border-radius: 0;
@@ -144,7 +144,7 @@ div input:focus {
     font-size: 1.5rem;
 }
 
-/* CORREÇÃO DO BOTÃO SOBRE: Mesmo tamanho de fonte dos outros */
+/* tentativa de correçao de tamanho */
 #btn-sobre {
     font-family: 'Fira Code', monospace;
     font-weight: bold;
@@ -249,6 +249,7 @@ article a:hover {
     cursor: alias;
 }
 
+/* meu nome no menu de about */
 .lubisca {
     color: var(--primary-color);
     text-decoration: none;
@@ -310,7 +311,7 @@ article a:hover {
     text-decoration: underline wavy var(--primary-color);
 }
 
-/* --- RESPONSIVIDADE OTIMIZADA (MOBILE) --- */
+/* --- RESPONSIVIDADE para MOBILE --- */
 @media (max-width: 768px) {
     
     /* 1. HEADER COMPACTO */
@@ -358,7 +359,7 @@ article a:hover {
         margin: 0; /* Remove margens extras */
      }
 
-    /* O botão de BUSCA ganha destaque (ocupa mais espaço se precisar ou fica full se preferir) */
+    /* O botão de BUSCA ganha destaque */
     #botao-busca {
         flex-basis: 100%; /* No mobile, o BUSCAR fica melhor sozinho numa linha ou... */
         /* Se quiser ele ao lado dos outros, mude flex-basis para auto */
@@ -366,7 +367,7 @@ article a:hover {
         min-width: 80px;
     }
 
-    /* 2. MAIN (CORPO) */
+    /* MAIN (CORPO) */
     main {
         padding: 0 1rem;
         margin-top: 1rem;
@@ -375,7 +376,7 @@ article a:hover {
         padding-bottom: 2rem;
     }
 
-    /* 3. FOOTER LIMPO */
+    /* FOOTER */
     .footer {
         position: relative; /* Deixa de ser fixo, vai para o final da página */
         flex-direction: column;
@@ -386,14 +387,14 @@ article a:hover {
         border-top: 1px dashed var(--tertiary-color); /* Borda mais leve */
     }
 
-    /* Ajuste dos links do footer para não ficarem colados */
+    /* separar links do footer */
     .footer-links {
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
     }
 
-    /* --- BOTÃO VOLTAR AO TOPO (Configuração Geral) --- */
+    /* --- botao de voltar em cima --- */
 #btn-topo {
     /* Visual Padrão */
     background: var(--bg-color);
@@ -404,7 +405,7 @@ article a:hover {
     cursor: pointer;
     z-index: 990;
     
-    /* Configuração Flex para alinhar ícone e texto */
+    /* Flex alinhar ícone e texto */
     display: none; /* O JS controla isso */
     align-items: center;
     justify-content: center;
@@ -449,14 +450,13 @@ article a:hover {
         border: 1px dashed var(--primary-color);
     }
 
-    /* Mostra o texto no mobile para ficar um botão grande */
+    /* isso mostra o texto no mobile para ficar um botão grande */
     .texto-btn {
         display: inline-block;
         font-weight: bold;
     }
 }
-
-    /* 4. AJUSTES EXTRAS */
+    /* AJUSTES EXTRAS */
     
     /* Modal ocupa mais tela no mobile */
     .modal-box {
@@ -464,12 +464,8 @@ article a:hover {
         padding: 1.5rem;
     }
     
-
 }
-    /* IMPORTANTE: Mover o Seletor de Temas para a ESQUERDA no mobile */
-    /* Assim ele não fica embaixo do botão de subir */
-
-/* --- EFEITOS E EXTRAS --- */
+/* --- EFEITOS E EXTRAS E ETC --- */
 
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
@@ -547,7 +543,7 @@ article a:hover {
     100% { transform: scale(1); }
 }
 
-/* --- NOVIDADE 2: Estilo "Click to Copy" nos exemplos (COM CORREÇÃO MOBILE) --- */
+/* --- "Click to Copy" nos exemplos (COM CORREÇÃO MOBILE) --- */
 .copy-code {
     cursor: copy;
     border-bottom: 1px dashed var(--tertiary-color);
